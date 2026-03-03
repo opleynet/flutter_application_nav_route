@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_nav_route/pages/setting_page.dart';
 
 import 'pages/home_page.dart';
 
@@ -11,9 +12,15 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: MyHomePage(),
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
+      //initialRoute remplace Home pour definir la route d'accueil
+      initialRoute: '/',
+      routes: {
+        '/': (context) => MyHomePage(),
+        '/settings': (context) => MySettingPage(),
+        //dictionnaire routes avec pages
+      },
     );
   }
 }

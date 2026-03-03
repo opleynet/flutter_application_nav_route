@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_application_nav_route/pages/setting_page.dart';
 
 class MyHomePage extends StatefulWidget{
   const MyHomePage({super.key});
@@ -20,13 +19,7 @@ class _MyPageHomeState extends State<MyHomePage>{
       body: Center(
         child: ElevatedButton(
           onPressed: (){
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context){
-                  return MySettingPage();
-                })
-              );
+            Navigator.pushNamed(context, '/settings');
           },
           child: Text("Aller page setting"),
       ),
