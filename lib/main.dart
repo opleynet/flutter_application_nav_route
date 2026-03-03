@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_nav_route/pages/mail_page.dart';
 import 'package:flutter_application_nav_route/pages/setting_page.dart';
 
 import 'pages/home_page.dart';
@@ -19,6 +20,7 @@ class MainApp extends StatelessWidget {
       routes: {
         '/': (context) => MyHomePage(),
         '/settings': (context) => MySettingPage(),
+        '/mail': (context) => MyMailPage(),
         //dictionnaire routes avec pages
       },
     );
